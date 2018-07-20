@@ -1,0 +1,88 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content:space-between;
+  text-align: center;
+}
+
+.calendar{
+  width:80%;
+  margin: auto;
+}
+
+.prev,.next{
+  align-self: flex-end;
+  white-space: nowrap;
+  cursor:pointer;
+  user-select: none;
+}
+.prev h1{
+  text-align: left;
+  font-size: 12px;
+}
+
+.next h1{
+  text-align: right;
+  font-size: 12px;
+
+}
+
+.row{
+  display: flex;
+}
+.loading{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+
+}
+.headerCell{
+    width:calc(100%/7);
+    text-align: center;
+    background: lightgrey;
+    padding: 15px 0;
+    font-weight: bolder;
+    font-size:12px;
+}
+
+@media (min-width:1000px) {
+  .calendar{
+    width:60%;
+  }
+  .header{
+    width: 60%;
+  }
+
+}
+
+@media (max-width:500px) {
+  .row{
+    display: block;
+  }
+  .headerCell{
+    display: none;
+    height: 100px;
+  }
+  .currentMonth{
+    position: absolute;
+    width: 80%;
+    top: -10px;
+  }
+
+  .currentMonth h1{
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .header{
+    margin-top: 50px;
+  }
+
+}
